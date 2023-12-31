@@ -1,0 +1,15 @@
+Scenerio 1
+- create a environment
+- install any one libaray "numpy" >> pip install numpy
+- open jupyter from that repository
+- close jupyter & delete the enviornment.
+
+Scenerio 2
+- craete a github repo
+- create .gitingore & ignore secret.sh
+- push the changes to github
+
+
+1- team work --> different branches
+2- sotware best practices --> production(main) --> dev()
+

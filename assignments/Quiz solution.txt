@@ -1,0 +1,38 @@
+Scenerio 1
+
+# Sample data: List of tuples containing employee names, sales figures, and customer satisfaction ratings
+employees = [
+    ("John", 50000, 4.5),
+    ("Alice", 60000, 4.7),
+    ("Bob", 45000, 4.2),
+    ("Emma", 55000, 4.6),
+    ("James", 48000, 4.4)
+]
+
+# Define weights for sales performance and customer satisfaction ratings
+sales_weight = 0.6
+satisfaction_weight = 0.4
+
+# Use list comprehension to calculate the weighted scores for each employee
+weighted_scores = [(emp[0], (lambda x, y: x * sales_weight + y * satisfaction_weight)(emp[1], emp[2])) for emp in employees]
+
+# Sort the employees based on their weighted scores in descending order
+sorted_employees = sorted(weighted_scores, key=lambda x: x[1], reverse=True)
+
+# Print the top-performing employees
+print("Top-performing employees based on weighted scores:")
+for i, (name, score) in enumerate(sorted_employees, 1):
+    print(f"{i}. {name}: {score}")
+
+Scenerio 2
+
+
+# Define a list of numbers from 1 to 10
+numbers = list(range(1, 11))
+
+# Use list comprehension and a lambda function to calculate square roots of even numbers
+square_roots_of_evens = [round((lambda x: x ** 0.5)(num), 2) for num in numbers if num % 2 == 0]
+
+# Print the square roots of even numbers
+print("Square roots of even numbers from 1 to 10:")
+print(square_roots_of_evens)
